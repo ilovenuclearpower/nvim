@@ -1,0 +1,3 @@
+#!/bin/bash
+eval "$(mise activate bash)"
+exec ~/.local/share/nvim/mason/packages/vtsls/node_modules/.bin/vtsls "$@"

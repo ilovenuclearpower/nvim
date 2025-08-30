@@ -4,7 +4,7 @@ return {
     opts = {
       servers = {
         vtsls = {
-          cmd = { vim.fn.expand("~/.local/bin/vtsls-wrapper"), "--stdio" },
+          cmd = { vim.fn.expand("~/.config/nvim/bin/vtsls-wrapper"), "--stdio" },
         },
       },
     },
