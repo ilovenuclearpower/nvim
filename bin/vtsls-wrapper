@@ -1,3 +1,11 @@
 #!/bin/bash
+
+# Check if mise is installed
+if ! command -v mise &> /dev/null; then
+    echo "mise not found, installing..."
+    curl https://mise.run | sh
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
 eval "$(mise activate bash)"
 exec ~/.local/share/nvim/mason/packages/vtsls/node_modules/.bin/vtsls "$@"
