@@ -30,6 +30,17 @@ return {
     end,
   },
 
+  -- override noice configuration to require treesitter
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = require("second2050.noice"),
+    dependencies = {
+	    "MunifTanjim/nui.nvim",
+	    "nvim-treesitter/nvim-treesitter",
+    },
+    },
+
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
@@ -123,7 +134,7 @@ return {
 
   -- add any tools you want to have installed below
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "stylua",
